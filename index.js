@@ -9,13 +9,6 @@ const partNumbers = require('./partNumbers.json');
 // Define command line args accepted.
 const optionDefinitions = [
   {
-    name: 'carrier',
-    type: String,
-    defaultValue: 'TMOBILE',
-    description:
-      "Define which carrier to search for.  Accepted options are: 'ATT', 'SPRING', 'TMOBILE', 'VERIZON'.",
-  },
-  {
     name: 'model',
     type: String,
     defaultValue: 'x',
@@ -93,10 +86,10 @@ if (options.help || options.zip === undefined) {
 
 // Get part number for the specified device.
 const partNumber =
-  partNumbers[options.model][options.carrier.toUpperCase()][options.color][options.storage];
+  partNumbers[options.model][options.color][options.storage];
 
 // Construct the endpoint url with the options selected.
-const endpoint = `https://www.apple.com/shop/retail/pickup-message?pl=true&cppart=${options.carrier}/US&parts.0=${partNumber}&location=${options.zip}`;
+const endpoint = `https://www.apple.com/nl/shop/retail/pickup-message?pl=true&parts.0=${partNumber}&location=${options.zip}`;
 
 // Keep track of the last request time.
 let lastRequestTimestamp = null;
