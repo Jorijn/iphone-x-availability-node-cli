@@ -46,6 +46,6 @@ node index.js --help
 | color   | `'silver'`, `'gray'`                          | `'gray'`                              |
 | storage | `64`, `256`                                   | `256`                                 |
 | delay   | Integer number of seconds between requests    | `30`                                  |
-| zip*    | 5 digit US zip code                           | Not provided, you must enter your own |
+| zip*    | 4+2 digit NL zip code                         | Not provided, you must enter your own |
 
 *\*required*
